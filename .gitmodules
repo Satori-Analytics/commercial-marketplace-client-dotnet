@@ -1,0 +1,4 @@
+[submodule "azure-sdk"]
+	path = azure-sdk
+	url = git@github.com:Satori-Analytics/azure-sdk-for-net.git
+	branch = develop
