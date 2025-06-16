@@ -2,7 +2,7 @@
   xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <RequiredTargetFrameworks>net6.0;net47</RequiredTargetFrameworks>
+    <RequiredTargetFrameworks>netstandard2.0;net472;net8.0</RequiredTargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>

@@ -17,6 +17,10 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <summary> P2Y. </summary>
         P2Y,
         /// <summary> P3Y. </summary>
-        P3Y
+        P3Y,
+        /// <summary> P4Y. </summary>
+        P4Y,
+        /// <summary> P5Y. </summary>
+        P5Y
     }
 }

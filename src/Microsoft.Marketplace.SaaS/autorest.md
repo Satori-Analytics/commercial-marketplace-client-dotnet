@@ -7,7 +7,7 @@
 title: Microsoft.Marketplace.SaaS
 require: $(this-folder)/../autorest.md
 input-file:
-  - https://github.com/microsoft/commercial-marketplace-openapi/blob/6ca8208abac8ad6d72b0ff899749aa3e458951d3/Microsoft.Marketplace.SaaS/2018-08-31/saasapi.v2.json
+  - https://github.com/microsoft/commercial-marketplace-openapi/blob/49068a8ec6449fd912588161d9558e8f512c9285/Microsoft.Marketplace.SaaS/2018-08-31/saasapi.v2.json
 namespace: Microsoft.Marketplace.SaaS
 directive:
   from: swagger-document

@@ -5,7 +5,6 @@
 
 #nullable disable
 
-using System;
 using System.Collections.Generic;
 using Azure.Core;
 
@@ -17,7 +16,7 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <summary> Initializes a new instance of Plan. </summary>
         internal Plan()
         {
-            SourceOffers = new ChangeTrackingList<Guid>();
+            SourceOffers = new ChangeTrackingList<SourceOffer>();
         }
 
         /// <summary> Initializes a new instance of Plan. </summary>
@@ -33,7 +32,7 @@ namespace Microsoft.Marketplace.SaaS.Models
         /// <param name="market"> . </param>
         /// <param name="planComponents"> . </param>
         /// <param name="sourceOffers"> . </param>
-        internal Plan(string planId, string displayName, bool? isPrivate, string description, long? minQuantity, long? maxQuantity, bool? hasFreeTrials, bool? isPricePerSeat, bool? isStopSell, string market, PlanComponents planComponents, IReadOnlyList<Guid> sourceOffers)
+        internal Plan(string planId, string displayName, bool? isPrivate, string description, long? minQuantity, long? maxQuantity, bool? hasFreeTrials, bool? isPricePerSeat, bool? isStopSell, string market, PlanComponents planComponents, IReadOnlyList<SourceOffer> sourceOffers)
         {
             PlanId = planId;
             DisplayName = displayName;
@@ -60,6 +59,6 @@ namespace Microsoft.Marketplace.SaaS.Models
         public bool? IsStopSell { get; }
         public string Market { get; }
         public PlanComponents PlanComponents { get; }
-        public IReadOnlyList<Guid> SourceOffers { get; }
+        public IReadOnlyList<SourceOffer> SourceOffers { get; }
     }
 }
