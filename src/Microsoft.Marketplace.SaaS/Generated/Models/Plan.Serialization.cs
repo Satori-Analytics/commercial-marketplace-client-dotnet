@@ -5,7 +5,6 @@
 
 #nullable disable
 
-using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using Azure.Core;
@@ -27,7 +26,7 @@ namespace Microsoft.Marketplace.SaaS.Models
             Optional<bool> isStopSell = default;
             Optional<string> market = default;
             Optional<PlanComponents> planComponents = default;
-            Optional<IReadOnlyList<Guid>> sourceOffers = default;
+            Optional<IReadOnlyList<SourceOffer>> sourceOffers = default;
             foreach (var property in element.EnumerateObject())
             {
                 if (property.NameEquals("planId"))
@@ -127,10 +126,10 @@ namespace Microsoft.Marketplace.SaaS.Models
                         property.ThrowNonNullablePropertyIsNull();
                         continue;
                     }
-                    List<Guid> array = new List<Guid>();
+                    List<SourceOffer> array = new List<SourceOffer>();
                     foreach (var item in property.Value.EnumerateArray())
                     {
-                        array.Add(item.GetGuid());
+                        array.Add(SourceOffer.DeserializeSourceOffer(item));
                     }
                     sourceOffers = array;
                     continue;
